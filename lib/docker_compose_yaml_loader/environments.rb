@@ -17,6 +17,7 @@ class DockerComposeYamlLoader
     end
 
     def setup
+      return unless File.exist?(@file_path)
       settings = DockerComposeYamlLoader.load(@file_path)
       @key.split('/').each do |k|
         settings = settings[k]

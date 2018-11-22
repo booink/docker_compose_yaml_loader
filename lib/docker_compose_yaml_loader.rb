@@ -20,6 +20,7 @@ class DockerComposeYamlLoader
   end
 
   def load
+    return unless File.exist?(@file_path)
     hash = YAML.load_file(@file_path)
     @settings = build(hash)
     @settings
