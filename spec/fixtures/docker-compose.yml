@@ -1,0 +1,12 @@
+webapp:
+  command: /code/run_web_app
+  ports:
+    - 8080:8080
+  links:
+    - queue
+    - db
+
+queue_worker:
+  command: /code/run_worker
+  links:
+    - queue

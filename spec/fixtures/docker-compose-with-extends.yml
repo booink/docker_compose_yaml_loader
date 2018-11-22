@@ -1,0 +1,19 @@
+webapp:
+  extends:
+    file: common.yml
+    service: app
+  image: foo
+  command: /code/run_web_app
+  ports:
+    - 8080:8080
+  links:
+    - queue
+    - db
+
+queue_worker:
+  extends:
+    file: common.yml
+    service: app
+  command: /code/run_worker
+  links:
+    - queue
