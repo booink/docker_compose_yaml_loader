@@ -10,8 +10,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['booink']
   spec.email         = ['booink.work@gmail.com']
 
-  spec.summary       = 'load from docker-compose.yml'
-  spec.description   = spec.summary
+  spec.summary       = 'Load from docker-compose.yml and set environments'
+  spec.description   = 'I wanted to give environment variables to Rails on the host PC while using docker-compose,
+but I created it for use when I do not want to duplicate definitions.
+Please use when dotenv etc. can not be used'
   spec.homepage      = 'https://github.com/booink/docker_compose_yaml_loader'
   spec.license       = 'MIT'
 
